@@ -20,6 +20,7 @@ class BasicDesignScreen extends StatelessWidget {
         child: const Icon(Icons.arrow_forward),
       ),
       body: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
           const Image(image: AssetImage("assets/landscape.jpg")),
           Container(

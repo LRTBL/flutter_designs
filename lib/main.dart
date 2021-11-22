@@ -1,4 +1,5 @@
 import 'package:designs/screens/basic_desing.dart';
+import 'package:designs/screens/footloose/login_screen.dart';
 import 'package:designs/screens/home_screen.dart';
 import 'package:designs/screens/scroll_design.dart';
 import 'package:flutter/material.dart';
@@ -18,10 +19,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // theme: ThemeData.dark(),
       initialRoute: 'basic',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch()
+            .copyWith(secondary: Colors.red, primary: Colors.purple),
+      ),
       routes: {
         'basic': (_) => const BasicDesignScreen(),
-        'scroll': (_) => const ScrollDesignScreen(),
         'home': (_) => const HomeScreen(),
+        'scroll': (_) => const ScrollDesignScreen(),
+        'footloose/login': (_) => const LoginScreen(),
       },
     );
   }

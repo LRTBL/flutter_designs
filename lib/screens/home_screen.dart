@@ -27,13 +27,17 @@ class _HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.only(top: 50),
-      child: Column(
-        children: const <Widget>[
-          PageTitle(),
-          CardTable(),
-        ],
+    return SizedBox(
+      height: double.infinity,
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.only(top: 50),
+        child: Column(
+          children: const <Widget>[
+            PageTitle(),
+            CardTable(),
+          ],
+        ),
       ),
     );
   }
